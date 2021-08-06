@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
-    <RootNamespace>MatrTech.Utilities.Extensions.Mongo</RootNamespace>
+    <RootNamespace>Matr.Utilities.Extensions.Mongo</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <OutputPath>..\..\..\..\local-packages</OutputPath>
@@ -10,12 +10,6 @@
 
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-
-    <MajorVersion>0</MajorVersion>
-    <MinorVersion>0</MinorVersion>
-    <PatchVersion>2</PatchVersion>
-    <BuildVersion>$([System.DateTime]::Now.ToString("yyMMddHHmm"))</BuildVersion>
-    <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</Version>
 
     <PackageId>MatrTech.Utilities.Extensions.Mongo</PackageId>
     <Authors>MatrTech</Authors>
@@ -26,6 +20,16 @@
     <RepositoryUrl>https://github.com/MatrTech/Utilities.Extensions.Mongo</RepositoryUrl>
   </PropertyGroup>
 
+  <Target Name="SetVersion" BeforeTargets="Build">
+    <PropertyGroup>
+      <MajorVersion>0</MajorVersion>
+      <MinorVersion>0</MinorVersion>
+      <PatchVersion>2</PatchVersion>
+      <BuildVersion  Condition="'$(DesignTimeBuild)' != 'true' OR '$(BuildingProject)' == 'true'">$([System.DateTime]::Now.ToString("HHmmss"))</BuildVersion>
+      <PackageVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</PackageVersion>
+    </PropertyGroup>
+  </Target>
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />

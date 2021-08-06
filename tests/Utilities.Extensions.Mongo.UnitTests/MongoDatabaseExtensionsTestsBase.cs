@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Driver;
 
-namespace MatrTech.Utilities.Extensions.Mongo.UnitTests
+namespace Matr.Utilities.Extensions.Mongo.UnitTests
 {
     [TestClass]
     public class MongoDatabaseExtensionsTestsBase

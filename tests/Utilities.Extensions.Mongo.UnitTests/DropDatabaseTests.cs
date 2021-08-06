@@ -4,7 +4,7 @@ using MongoDB.Bson;
 using System;
 using System.Threading.Tasks;
 
-namespace MatrTech.Utilities.Extensions.Mongo.UnitTests
+namespace Matr.Utilities.Extensions.Mongo.UnitTests
 {
     [TestClass]
     public class DropDatabaseTests : MongoDatabaseExtensionsTestsBase

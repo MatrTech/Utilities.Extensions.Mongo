@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
 		<IsPackable>false</IsPackable>
-		<RootNamespace>MatrTech.Utilities.Extensions.Mongo.UnitTests</RootNamespace>
+		<RootNamespace>Matr.Utilities.Extensions.Mongo.UnitTests</RootNamespace>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 

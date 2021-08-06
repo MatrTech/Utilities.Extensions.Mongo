@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MatrTech.Utilities.Extensions.Mongo
+namespace Matr.Utilities.Extensions.Mongo
 {
     public static partial class MongoDatabaseExtensions
     {
